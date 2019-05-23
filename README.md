@@ -1,4 +1,5 @@
-# Creator 
+# Creator
+
 This is the template creator. To make a template:
 
 1. run `wrangler generate myTempName https://github.com/victoriabernard92/workers-template-creator` but with the name of your template
@@ -8,6 +9,7 @@ This is the template creator. To make a template:
 3. Add template logic to `index.js`
 
 4. Fill out the `README.md` here is the example:
+
     ## {{ project-name }}
 
     TODO: give description of {{ project-name }} here's an example:
@@ -21,6 +23,7 @@ This is the template creator. To make a template:
     [Demo Generate](https://workers-tooling.cf/demos/redirect/send) | [Demo Bulk](https://workers-tooling.cf/demos/redirect/bulk1)
 
     #### Wrangler
+
     To generate using [wrangler](https://github.com/cloudflare/wrangler)
 
     ```
@@ -28,17 +31,17 @@ This is the template creator. To make a template:
     ```
 
     #### Serverless
+
     To deploy using serverless add a [`serverless.yml`](https://serverless.com/framework/docs/providers/cloudflare/) file.
-    
+
 5. Run `npm install`
 
 6. Now some weird steps that I hope to change...
 
     a. Commit files changes to run linter
 
-    b. Rename `package.json.template` to overwrite `package.json`. The syntax in the package.json that you should commit should include ` "name": "{{ project-name }}",` which when you run #5 and #a will cause errors.
+    b. Rename name in package.json to `"name": "{{ project-name }}",`. 
 
-    c. now just commit the package.json and bypass linter `git add package.json && git commit --amend --no-verify`
+    c. This will cause errors when you run #5 and #a, so now commit the package.json and bypass linter `git add package.json && git commit --amend --no-verify`
 
 7. Add the template to the template gallery after having it approved
-

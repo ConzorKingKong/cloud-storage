@@ -6,7 +6,7 @@ This is the template creator. To make a template:
 
 2. `cd myTempName`
 
-3. Add project logic to the directory.
+3. Add project logic to the directory. Run `npm install`.
 
 4. Specify the entry point of the Worker script in package.json in `main` property.
 

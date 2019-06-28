@@ -3,7 +3,7 @@ addEventListener('fetch', event => {
 })
 
 /**
- * Fetch and log a request
+ * Return a simple Hello World response
  * @param {Request} request
  */
 async function handleRequest(request) {

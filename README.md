@@ -14,13 +14,12 @@ This is the template creator. To make a template:
 
 6. Fill out the `README.md`. Make sure to include:
 
-    - Description of what the Worker accomplishes.
-    - Demo. Ideally a demo using cloudflareworkers.com, but for Worker demos requiring special headers,
-      POST bodies,.. a live demo of where the Worker is running also works.
+   - Description of what the Worker accomplishes.
+   - Demo. Ideally a demo using cloudflareworkers.com, but for Worker demos requiring special headers,
+     POST bodies,.. a live demo of where the Worker is running also works.
 
 7. Commit source files omitting build files of course.
 
 8. Host a public repo, and then test your project by running `wrangler generate https://github.com/<your-repo>`.
 
-9. Submit a PR to add the template to the [template gallery](https://github.com/cloudflare/cloudflare-docs/) after having it approved.
-10.
+9. Submit a PR to add the template to the [template gallery](https://github.com/cloudflare/cloudflare-docs/edit/master/content/templates/_index.md) after having it approved.

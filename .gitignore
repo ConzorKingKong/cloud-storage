@@ -2,3 +2,5 @@ node_modules/*
 serverless.yml
 wrangler.toml
 *.log
+worker/
+dist/

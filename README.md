@@ -17,6 +17,7 @@ This is the template creator. To make a template:
      POST bodies,.. a live demo of where the Worker is running also works.
 
 6. Review the contribution guide thoroughly [here](./CONTRIBUTING.md)
+
 7. Commit source files omitting build files of course.
 
 8. Host a public repo, and then test your project by running `wrangler generate https://github.com/<your-repo>`.

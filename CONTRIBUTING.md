@@ -18,7 +18,7 @@ To start making a template, first one must decide what to build. When deciding a
 
 The goal of any template is to be reusable amongst several projects, developers and entities; therefore, any template must be able to be used in a generic form. That does not mean that one can't use things like hardcoded constants, it just means those constants must be obvious and the logic must be generic.
 
-Examples of [good templates that we need help building](https://wiki.cfops.it/display/EW/Templates+and+Template+Gallery). (TODO: remove this link for external?):
+Examples of [good templates that we need help building](https://wiki.cfops.it/display/EW/Templates+and+Template+Gallery). (TODO: remove this link for external and replace with a different list?):
 
 - How to send a redirect
 
@@ -146,7 +146,7 @@ cd myTempName
 wrangler preview
 ```
 
-You do not need to strictly follow the snippet format for boilerplates, it is recommended.
+You do not need to strictly follow the snippet format for boilerplates, but it is recommended.
 
 ### Snippet Format
 
@@ -213,11 +213,10 @@ This process is for internal only and will improve
 ## Boilerplate
 
 1. Host a public repo, and then test your project by running `wrangler generate https://github.com/<your-repo>`.
-
 2. Have Victoria (@victoriabernard92 on Github) review your code via a PR into your own repo.
-
-3. Submit a PR to add the template to the [template gallery](https://github.com/cloudflare/cloudflare-docs/edit/master/content/templates/_index.md) after having it approved.
+3. Submit a PR to add the template to the [template gallery](https://github.com/cloudflare/cloudflare-docs/edit/master/content/templates/_index.md) after having it approved. Make sure to follow the same format as other boilerplates in the gallery and include all the same fields (e.g. wrangler genereate, demo.. )
 
 ## Snippets
 
 1. Include victoria (@victoriabernard92 on Github) to a PR review to your own repo, or share a gist (e.g. [some gist](https://gist.github.com/victoriabernard92/5d63a2abc92fb0e5774cfd6a7035ecda.js))
+2. Add the code to the [template gallery](https://github.com/cloudflare/cloudflare-docs/edit/master/content/templates/_index.md) following the format of another snippet like \_\_\_ (WIP).

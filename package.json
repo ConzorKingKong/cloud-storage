@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "description": "package for creating workers templates",
+  "description": "package for cloud storage in Workers",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,5 +17,12 @@
       "pre-commit": "npm run format",
       "pre-push": "npm run format"
     }
+  },
+  "dependencies": {
+    "aws4fetch": "^1.0.0",
+    "dotenv-webpack": "^1.7.0",
+    "serverless-cloudflare-workers": "^1.2.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
   }
 }

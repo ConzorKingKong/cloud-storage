@@ -4,3 +4,4 @@ wrangler.toml
 *.log
 worker/
 dist/
+.env

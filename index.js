@@ -1,26 +1,34 @@
 /**
- * Here are what developers are expected to fill in
- * Replace url with the host you wish to send requests to
- * @param {string} url
+ * Important constants
+ * @param {string} bucket
+ * @param {string} hostname
  */
-const url = 'https://example.com'
+const bucket = "cfredirect"
+const hostname = '.s3.amazonaws.com'
 
 /**
- * Helper function
- * Here is what my help does
- * @param {string} path
+ * Module Import
+ * This module lets you access your AWS buckets
+ * by wrapping your calls with AWS auth headers
+ * @param {string} accessKeyId
+ * @param {string} secretAccessKey
  */
-function helper(path) {
-  return url + '/' + path
-}
+import {AwsClient} from 'aws4fetch';
+
+const aws = new AwsClient({
+  accessKeyId: process.env.accessKeyId,
+  secretAccessKey: process.env.secretAccessKey
+})
 
 /**
- * Return a simple Hello World response
+ * Redirects your call to an AWS bucket
  * @param {Request} request
  */
 async function handleRequest(request) {
-  helper(request.url.path)
-  return new Response('Hello worker!', { status: 200 })
+  const {method, body} = request
+  const url = new URL(request.url)
+  url.hostname = bucket + hostname
+  return aws.fetch(url, {method, body})
 }
 
 addEventListener('fetch', event => {

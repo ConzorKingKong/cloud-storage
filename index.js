@@ -3,7 +3,7 @@
  * @param {string} bucket
  * @param {string} hostname
  */
-const bucket = "cfredirect"
+const bucket = 'cfredirect'
 const hostname = '.s3.amazonaws.com'
 
 /**
@@ -13,11 +13,11 @@ const hostname = '.s3.amazonaws.com'
  * @param {string} accessKeyId
  * @param {string} secretAccessKey
  */
-import {AwsClient} from 'aws4fetch';
+import { AwsClient } from 'aws4fetch'
 
 const aws = new AwsClient({
   accessKeyId: process.env.accessKeyId,
-  secretAccessKey: process.env.secretAccessKey
+  secretAccessKey: process.env.secretAccessKey,
 })
 
 /**
@@ -25,10 +25,10 @@ const aws = new AwsClient({
  * @param {Request} request
  */
 async function handleRequest(request) {
-  const {method, body} = request
+  const { method, body } = request
   const url = new URL(request.url)
   url.hostname = bucket + hostname
-  return aws.fetch(url, {method, body})
+  return aws.fetch(url, { method, body })
 }
 
 addEventListener('fetch', event => {

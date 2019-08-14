@@ -2,6 +2,10 @@
 
 This Worker allows you to put things into - and pull things out of - cloud storage from AWS.
 
+To use this template in wrangler, run:
+
+`wrangler generate cloud-storage https://github.com/ConzorKingKong/cloud-storage`
+
 Make sure to add a `.env` file to the root directory for the `accessKeyId` and `secretAccessKey` values in the `index.js` file.
 
 ## Demo

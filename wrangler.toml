@@ -1,0 +1,7 @@
+name = "cloud-storage"
+type = "webpack"
+webpack_config = "webpack.config.js"
+zone_id = ""
+private = false
+account_id = ""
+route = ""
